@@ -1,5 +1,0 @@
-for i in /home/${USER}/.bash/alias_lib/*; do
-	. $i
-done
-
-# vim: set syn=sh :

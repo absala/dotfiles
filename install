@@ -3,7 +3,8 @@ echo "Old .dotfiles moved to .file.old";
 
 INSTALLDIR=${1:-$HOME}
 
-for i in .bash  .bash_logout  .bashrc  bin  completion .tmux.conf .tmux-powerlinerc
+#for i in .bash  .bash_logout  .bashrc  bin  completion 
+for i in .vimperatorrc .tmux.conf .tmux-powerlinerc
 do
 	mv $INSTALLDIR/$i $INSTALLDIR/$i.old 2> /dev/null
 	ln -s $PWD/$i $INSTALLDIR/$i;
@@ -13,31 +14,25 @@ echo -n "Do you want to use my vim configs? [n/Y]"
 read -n 1 use_vim_configs
 
 if [ "$use_vim_configs" == "Y" ]; then
-	ln -s $PWD/.vim $INSTALLDIR/.vim
+    if [ ! -d $INSTALLDIR/.node-completion ]; then
+        ln -s $PWD/.vim $INSTALLDIR/.vim
+    fi
+	mv $INSTALLDIR/.vimrc $INSTALLDIR/.vimrc.old 2> /dev/null
 	ln -s $PWD/.vimrc $INSTALLDIR/.vimrc
 fi
 echo
 
-echo "Git config settings"
-echo -n "Name: "
-read git_name
-echo -ne "\nEmail: "
-read git_email
-
-cp $PWD/.gitconfig $INSTALLDIR/.gitconfig
-sed -i "s/%%GITNAME%%/$git_name/" $INSTALLDIR/.gitconfig
-sed -i "s/%%GITEMAIL%%/$git_email/" $INSTALLDIR/.gitconfig
 
 if [ ! -d $INSTALLDIR/.node-completion ]; then
 	mkdir $INSTALLDIR/.node-completion
 fi
 
-if [ ! -d $HOME/repos ]; then
-	mkdir $HOME/repos
+if [ ! -d $HOME/linux_repos ]; then
+	mkdir $HOME/linux_repos
 fi
 
-if [ ! -d $HOME/repos/tmux-powerline ]; then
-	git clone git://github.com/erikw/tmux-powerline.git $HOME/repos/tmux-powerline
+if [ ! -d $HOME/linux_repos/tmux-powerline ]; then
+	git clone git://github.com/erikw/tmux-powerline.git $HOME/linux_repos/tmux-powerline
 fi
 
 echo "Initializing submodules..."
