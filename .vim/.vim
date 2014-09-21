@@ -1,1 +1,0 @@
-/home/wurzelsepp/dotfiles/.vim
