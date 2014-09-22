@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/qmake-syntax-vim"]
 	path = .vim/bundle/qmake-syntax-vim
 	url = https://github.com/artoj/qmake-syntax-vim.git
+[submodule ".vim/bundle/ctrlp.vim"]
+	path = .vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
