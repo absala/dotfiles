@@ -182,11 +182,11 @@ if has("win32") && !has("gui_running")
 else
 " Color Settings
 "color wombat256
-color xterm16
+"color xterm16
 "color railscasts
 "color molokai
 "color skittles_dark
-"color skittles_berry
+color skittles_berry
 "colorscheme desert
 endif
 
