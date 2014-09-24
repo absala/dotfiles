@@ -162,7 +162,8 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-
+if has("win32") && !has("gui_running")
+else
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
@@ -170,20 +171,24 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
 
+if has("win32") && !has("gui_running")
+else
 " Color Settings
 "color wombat256
-"color xterm16
+color xterm16
 "color railscasts
-color molokai
+"color molokai
 "color skittles_dark
 "color skittles_berry
 "colorscheme desert
+endif
 
 set background=dark
 
@@ -432,9 +437,12 @@ nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader><Space> <Plug>(easymotion-s2)
 
 "Powerline
+if has("win32") && !has("gui_running")
+call add (g:pathogen_disabled, 'vim-powerline')
+else
 let g:Powerline_symbols = "fancy"
 set t_Co=256
-
+endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
