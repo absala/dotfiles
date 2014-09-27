@@ -386,10 +386,10 @@ vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 " To go to the previous search results do:
 "   <leader>p
 "
-map <leader>cc :botright cope<cr>
-map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
+"map <leader>cc :botright cope<cr>
+"map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
+"map <leader>n :cn<cr>
+"map <leader>p :cp<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -415,13 +415,22 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 map <leader>q :e ~/buffer<cr>
 
 " Toggle paste mode on and off
-map <leader>pp :setlocal paste!<cr>
+" map <leader>pp :setlocal paste!<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" vim
+
+"YankRing
+nnoremap <silent> <F11> :YRShow<Cr>
+let g:yankring_replace_n_pkey = '<leader>p'
+
+
+"let g:yankring_replace_n_pkey = '<leader>['
+
+
 
 "EasyMotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings-easymotion
