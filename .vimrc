@@ -58,6 +58,7 @@ if has("autocmd")
 nnoremap <silent> <leader>v :call EditConfig()<cr>
 
 inoremap jk <Esc>
+inoremap kj <Esc>
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -250,8 +251,9 @@ vnoremap <silent> # :call VisualSelection('b')<CR>
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Treat long lines as break lines (useful when moving around in them)
-noremap j gj
-noremap k gk
+" But not useful in macros!!!!
+"noremap j gj
+"noremap k gk
           
 " Map <Space> to <C-d> scroll down 
 noremap <space> <C-d>
@@ -323,6 +325,11 @@ vno <left> <Nop>
 vno <right> <Nop>
 vno <up> <Nop>
 
+" Mouse support
+
+set mouse=a
+map <MouseWheelUp> <C-Y>
+map <MouseWheelDown> <C-E>
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
