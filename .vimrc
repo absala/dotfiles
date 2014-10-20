@@ -502,7 +502,7 @@ endif
 "##                                                                     ##
 "#########################################################################
 
-" CTRL-P
+"CTRL-P
 
 if !has('python')
     echo 'pymatcher plugins needs python'
@@ -516,6 +516,12 @@ let g:ctrlp_lazy_update = 100
 "    let g:ctrlp_custom_ignore = 'tmp$\|\.git$\|\.hg$\|'
 "    let g:ctrlp_user_command = 'find %s -type f'
 endif
+
+"TagList
+
+nnoremap <silent> <F8> :TlistToggle<CR>
+
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
