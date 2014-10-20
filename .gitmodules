@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/vim-over"]
 	path = .vim/bundle/vim-over
 	url = https://github.com/osyo-manga/vim-over.git
+[submodule ".vim/bundle/taglist"]
+	path = .vim/bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
