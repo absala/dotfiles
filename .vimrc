@@ -388,16 +388,19 @@ vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 "   <leader>cc
 "
 " To go to the next search result do:
-"   <leader>n
+"   <leader>cn
 "
 " To go to the previous search results do:
-"   <leader>p
+"   <leader>cp
 "
-"map <leader>cc :botright cope<cr>
-"map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-"map <leader>n :cn<cr>
-"map <leader>p :cp<cr>
+map <leader>cc :botright cope<cr>
+map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
+map <leader>cn :cn<cr>
+map <leader>cp :cp<cr>
 
+" ctags specific settings
+" having only one tags file in top level - the semicolon will make vim climb up directories until it finds the tags file.
+set tags=tags;
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
@@ -498,6 +501,22 @@ endif
 "##     vmap  <expr>     <UP><UP>     DVB_Drag('up')                    ##
 "##                                                                     ##
 "#########################################################################
+
+" CTRL-P
+
+if !has('python')
+    echo 'pymatcher plugins needs python'
+else
+    "    pymatcher does not work yet: always gets NO ENTRIES current workaround: don't clear cache on exit 
+"    let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+"   let g:ctrlp_match_func = { 'match': ''}
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_lazy_update = 100
+"    let g:ctrlp_max_files = 0
+"    let g:ctrlp_custom_ignore = 'tmp$\|\.git$\|\.hg$\|'
+"    let g:ctrlp_user_command = 'find %s -type f'
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
