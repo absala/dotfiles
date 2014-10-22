@@ -238,7 +238,8 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-
+exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+set list
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
@@ -521,7 +522,10 @@ endif
 
 nnoremap <silent> <F8> :TlistToggle<CR>
 
+"Ack.vim
+"
 
+let g:ack_default_options = " -H --nocolor --nogroup --column"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
