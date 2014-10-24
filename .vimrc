@@ -523,7 +523,7 @@ endif
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 "Ack.vim
-"
+" sudo apt-get install ack-grep
 
 let g:ack_default_options = " -H --nocolor --nogroup --column"
 
