@@ -43,10 +43,16 @@ let g:mapleader = ","
 set timeoutlen=8000 
 
 if has("autocmd")
-	  autocmd bufwritepost .vimrc source $MYVIMRC
-      autocmd bufread,bufnewfile .vimrc noremap <F6> :s/^"//<CR>
-      autocmd BufRead,bufnewfile .vimrc noremap <F7> :s/^/"/<CR>
+      autocmd bufwritepost .vimrc source $MYVIMRC
+
+      " line comments
+      autocmd bufnewfile,bufread,bufenter .vimrc noremap <F7> :s/^"//<CR>
+      autocmd bufnewfile,bufread,bufenter .vimrc noremap <F6> :s/^/"/<CR>
+      autocmd bufnewfile,bufread,bufenter *.cpp,*.h,*.hpp,*.c noremap <F7> :s/^\/\///<CR>
+      autocmd bufnewfile,bufread,bufenter *.cpp,*.h,*.hpp,*.c noremap <F6> :s/^/\/\//<CR>
+
 " Return to last edit position when opening files (You want this!)
+
     autocmd BufReadPost * 
          \ if line("'\"") > 0 && line("'\"") <= line("$") |
          \   exe "normal! g`\"" |
@@ -367,7 +373,7 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 
-
+noremap <F2> :e $HOME/todo/todo.txt<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimgrep searching and cope displaying
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
