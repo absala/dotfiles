@@ -61,6 +61,7 @@ if has("autocmd")
     autocmd BufWrite *.coffee :call DeleteTrailingWS()
     endif
 
+
 nnoremap <silent> <leader>v :call EditConfig()<cr>
 
 inoremap jk <Esc>
@@ -337,6 +338,16 @@ vno <up> <Nop>
 set mouse=a
 map <MouseWheelUp> <C-Y>
 map <MouseWheelDown> <C-E>
+
+" Line number support
+
+:au FocusLost * :set number
+":au FocusGained * :set relativenumber
+
+autocmd InsertEnter * :set nonumber
+"autocmd InsertLeave * :set relativenumber
+nnoremap <silent><leader>n :set rnu! rnu? <cr>
+
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
