@@ -26,6 +26,8 @@ YRYankRange-example	yankring.txt	/*YRYankRange-example*
 any-item-example	yankring.txt	/*any-item-example*
 global-example	yankring.txt	/*global-example*
 multiple-items-example	yankring.txt	/*multiple-items-example*
+sftmux-create-new-window	tmuxhelp.txt	/*sftmux-create-new-window*
+sftmux-rename-window	tmuxhelp.txt	/*sftmux-rename-window*
 yankring	yankring.txt	/*yankring*
 yankring-commands	yankring.txt	/*yankring-commands*
 yankring-configure	yankring.txt	/*yankring-configure*
