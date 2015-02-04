@@ -1,0 +1,5 @@
+pane	0	0	:[tmux]	0	:-	0	:/home/ab/dotfiles/.tmux/plugins/tpm	1	vim	:vim README.md
+pane	0	1	:bash	1	:*	0	:/home/ab	1	bash	:
+window	0	0	0	:-	b9bd,192x43,0,0,0
+window	0	1	1	:*	b9be,192x43,0,0,1
+state	0	
