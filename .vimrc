@@ -350,7 +350,8 @@ map <MouseWheelDown> <C-E>
 
 autocmd InsertEnter * :set nonumber
 "autocmd InsertLeave * :set relativenumber
-nnoremap <silent><leader>n :set rnu! rnu? <cr>
+"nnoremap <silent><leader>n :set rnu! rnu? <cr>
+nnoremap <silent><leader>n :call ToggleNumber() <cr>
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -534,9 +535,10 @@ else
 "   let g:ctrlp_match_func = { 'match': ''}
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_lazy_update = 100
-"    let g:ctrlp_max_files = 0
+    let g:ctrlp_max_files = 0
 "    let g:ctrlp_custom_ignore = 'tmp$\|\.git$\|\.hg$\|'
 "    let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files --exclude-standard -co']
 endif
 
 "TagList
@@ -551,6 +553,19 @@ let g:ack_default_options = " -H --nocolor --nogroup --column"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! ToggleNumber()
+    if (&number == 0)
+        if ( &rnu == 0)
+            set rnu rnu?
+        else
+            set nornu
+            set number number?
+        endif
+    elseif (&number == 1)
+        set nonumber
+    endif
+endfunction
+
 function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
