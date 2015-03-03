@@ -59,6 +59,8 @@ if has("autocmd")
          \ endif
     autocmd BufWrite *.py :call DeleteTrailingWS()
     autocmd BufWrite *.coffee :call DeleteTrailingWS()
+
+    autocmd BufWrite *.md : !pandoc -s % > %:r.html
     endif
 
 nnoremap <silent> <leader>v :call EditConfig()<cr>
