@@ -61,6 +61,7 @@ if has("autocmd")
     autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
     autocmd BufWrite *.md : !pandoc -s % > %:r.html
+    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
     endif
 
 
