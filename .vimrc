@@ -32,6 +32,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "install all plugins from the bundle dir
  execute pathogen#infect()
+ Helptags
 
 
 " With a map leader it's possible to do extra key combinations
