@@ -7,3 +7,6 @@ Create new window *sftmux-create-new-window*
 <Prefix> - c 
 Rename window *sftmux-rename-window*
 <Prefix> - ,
+
+Kill current pane *sftmux-kill--pane*
+<Prefix> - x
