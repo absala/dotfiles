@@ -12,6 +12,7 @@ done;
 
 
 ln -s $PWD/.tmux $INSTALLDIR/.tmux
+ln -s $PWD/.wmii $INSTALLDIR/.wmii
 
 echo -n "Do you want to use my vim configs? [n/Y]"
 read -n 1 use_vim_configs
