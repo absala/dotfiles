@@ -51,7 +51,7 @@ wmiir write /colrules <<!
 # Tagging Rules
 wmiir write /tagrules <<!
 /firefox|Firefox|Vimperator/ -> +2
-/qtcreator/ -> +3
+/Qt Creator|qtcreator/ -> +3
 /EyeVision/ -> +4
 /MPlayer|VLC/ -> ~
 /gitk/ -> +5
