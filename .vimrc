@@ -61,7 +61,8 @@ if has("autocmd")
     autocmd BufWrite *.py :call DeleteTrailingWS()
     autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
-    autocmd BufWrite *.md : !pandoc -s % > %:r.html
+    "-t slidy
+    autocmd BufWritePost *.md : !pandoc  -s % > %:r.html && firefox %:r.html &
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown
     endif
 
@@ -195,7 +196,6 @@ else
 " Color Settings
 "color wombat256
 "color xterm16
-"color railscasts
 "color molokai
 "color skittles_dark
 color skittles_berry
@@ -544,6 +544,7 @@ endif
 "TagList
 
 nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap <silent> <F9> :NERDTreeToggle<CR>
 
 "Ack.vim
 " sudo apt-get install ack-grep

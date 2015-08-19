@@ -39,6 +39,7 @@ list-snippets	snipMate.txt	/*list-snippets*
 multi_snip	snipMate.txt	/*multi_snip*
 multiple-items-example	yankring.txt	/*multiple-items-example*
 sftmux-create-new-window	tmuxhelp.txt	/*sftmux-create-new-window*
+sftmux-kill--pane	tmuxhelp.txt	/*sftmux-kill--pane*
 sftmux-rename-window	tmuxhelp.txt	/*sftmux-rename-window*
 snipMate	snipMate.txt	/*snipMate*
 snipMate-$#	snipMate.txt	/*snipMate-$#*
