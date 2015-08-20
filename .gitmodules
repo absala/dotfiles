@@ -1,3 +1,17 @@
+[submodule ".vim/bundle/taskwiki"]
+	path = .vim/bundle/taskwiki
+	url = https://github.com/tbabej/taskwiki
+[submodule ".vim/bundle/vim-plugin-AnsiEsc"]
+	path = .vim/bundle/vim-plugin-AnsiEsc
+	url = https://github.com/powerman/vim-plugin-AnsiEsc
+    branch = master
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule ".vim/bundle/vimwiki"]
+	path = .vim/bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki
+    branch = dev
 [submodule ".vim/bundle/vim-easymotion"]
 	path = .vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
