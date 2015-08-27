@@ -1,3 +1,7 @@
+[submodule ".vim/bundle/vimwiki"]
+	path = .vim/bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki
+    branch = dev
 [submodule ".vim/bundle/taskwiki"]
 	path = .vim/bundle/taskwiki
 	url = https://github.com/tbabej/taskwiki
