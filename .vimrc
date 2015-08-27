@@ -241,6 +241,8 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
+autocmd FileType vimwiki set tabstop=2|set shiftwidth=2|set expandtab
+
 " Linebreak on 500 characters
 set lbr
 set tw=500
