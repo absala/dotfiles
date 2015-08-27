@@ -228,6 +228,9 @@ Key $MODKEY-p      # Open program menu
 Key $MODKEY-Return # Launch a terminal
 	eval wmiir setsid $WMII_TERM &
 
+Key $MODKEY-e # launch file explorer
+    thunar &
+
 KeyGroup Other
 Key $MODKEY-Control-t # Toggle all other key bindings
 	case $(wmiir read /keys | wc -l | tr -d ' \t\n') in
