@@ -456,16 +456,6 @@ map <leader>q :e ~/buffer<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" vim
-
-"YankRing
-nnoremap <silent> <F11> :YRShow<Cr>
-let g:yankring_replace_n_pkey = '<leader>p'
-
-
-"let g:yankring_replace_n_pkey = '<leader>['
-
-
 
 "EasyMotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings-easymotion
