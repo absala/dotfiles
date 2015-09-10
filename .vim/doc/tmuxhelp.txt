@@ -5,8 +5,15 @@ This file helps to go through the most common tasks of tmux in my system.
 
 Create new window *sftmux-create-new-window*
 <Prefix> - c 
+
 Rename window *sftmux-rename-window*
 <Prefix> - ,
+
+Create new pane vertical sftmux-create--pane
+<Prefix> - "
+
+Create new pane horicontal 
+<Prefix> - %
 
 Kill current pane *sftmux-kill--pane*
 <Prefix> - x
