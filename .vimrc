@@ -32,7 +32,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "install all plugins from the bundle dir
  execute pathogen#infect()
- Helptags
 
 
 " With a map leader it's possible to do extra key combinations
@@ -285,6 +284,7 @@ noremap <space> <C-d>
 " Disable highlight when <leader><cr> is pressed
 "map <silent> <leader><cr> :noh<cr>
 map <silent> <leader><cr> :<C-u>noh<CR>2<C-g>
+
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -352,6 +352,10 @@ autocmd InsertEnter * :set nonumber
 "autocmd InsertLeave * :set relativenumber
 "nnoremap <silent><leader>n :set rnu! rnu? <cr>
 nnoremap <silent><leader>n :call ToggleNumber() <cr>
+
+" <C-]> was used to follow tags: mapping to ü in normal mode
+"
+nmap ü <C-]>
 
 """"""""""""""""""""""""""""""
 " => Status line
