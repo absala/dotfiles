@@ -240,6 +240,20 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
+autocmd FileType vimwiki set tabstop=2|set shiftwidth=2|set expandtab
+
+    let wiki_1 = {}
+    let wiki_1.path = '~/vimwiki/'
+    "let wiki_1.html_template = '~/public_html/template.tpl'
+    "let wiki_1.nested_syntaxes = {'python': 'python', 'c++': 'cpp'}
+
+    let wiki_2 = {}
+    let wiki_2.path = '~/vimwiki_private/'
+    "let wiki_2.index = 'main'
+
+    let g:vimwiki_list = [wiki_1, wiki_2]
+
+
 " Linebreak on 500 characters
 set lbr
 set tw=500
@@ -458,16 +472,6 @@ map <leader>q :e ~/buffer<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" vim
-
-"YankRing
-nnoremap <silent> <F11> :YRShow<Cr>
-let g:yankring_replace_n_pkey = '<leader>p'
-
-
-"let g:yankring_replace_n_pkey = '<leader>['
-
-
 
 "EasyMotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings-easymotion

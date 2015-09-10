@@ -1,9 +1,0 @@
-pane	0	0	:python	1	:*	0	:/home/ab/EVT_LIBS/Qt/qt-everywhere-opensource-src-4.8.4	1	python	:wish /usr/bin/gitk -- --all
-python qt_configure.py unix-x86_64 release
-pane	0	1	:EV3	0	: 	0	:/home/ab/EVT_LIBS/cryptopp-5.6.2	1	bash	:
-pane	0	2	:bash	0	:-	0	:/home/ab/EV3_target/unix-x86_64/opt/EV3/bin	0	vim	:vim ./result.txt
-pane	0	2	:bash	0	:-	1	:/home/ab/EV3_target/unix-x86_64/opt/EV3/bin	1	bash	:
-window	0	0	1	:*	b9bd,192x43,0,0,0
-window	0	1	0	: 	b9be,192x43,0,0,1
-window	0	2	0	:-	9163,192x43,0,0[192x21,0,0,2,192x21,0,22,3]
-state	0	0
